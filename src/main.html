@@ -1,0 +1,10 @@
+<h1>REQURE DATA</h1>
+<button class="mode" (click)="mode = 'cards'">Cards</button>
+<button class="mode" (click)="mode = 'table'">Table</button>
+<app-card *ngIf="mode == 'cards'" [users]="users"></app-card>
+<app-table
+  *ngIf="mode == 'table'"
+  [users]="users"
+  (previous)="previousPage()"
+  (next)="nextPage()"
+></app-table>

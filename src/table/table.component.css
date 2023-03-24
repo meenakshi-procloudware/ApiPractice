@@ -1,0 +1,22 @@
+.action {
+  margin: 12px;
+}
+
+img {
+  border-radius: 20px;
+}
+
+.footer {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0px;
+  background-color: skyblue;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+}

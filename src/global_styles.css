@@ -1,1 +1,5 @@
-/* Add application styles & imports to this file! */
+.mode {
+  background: blue;
+  color: white;
+  margin-right: 10px;
+}

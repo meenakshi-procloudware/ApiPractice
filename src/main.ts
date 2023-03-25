@@ -19,7 +19,7 @@ export class App implements OnInit {
   name = 'Angular';
   response: UsersResponse | undefined;
   users: User[] = [];
-  mode: 'table' | 'cards' = 'cards';
+  mode: 'table' | 'cards' = 'table';
   constructor(private http: HttpClient, private mainService: MainService) {}
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class App implements OnInit {
       console.log(res);
       this.response = res;
       this.users = res.data;
-      console.log('::::');
+      console.log('::::', this.response.data);
     });
   }
   previousPage() {

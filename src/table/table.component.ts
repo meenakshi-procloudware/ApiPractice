@@ -10,7 +10,7 @@ import { User, UsersResponse } from './interceptor';
   imports: [CommonModule],
 })
 export class TableComponent implements OnInit {
-  @Input() usersRes: UsersResponse[] = [];
+  @Input() response: any = {};
   @Output() previous = new EventEmitter();
   @Output() next = new EventEmitter();
 

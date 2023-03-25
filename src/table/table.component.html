@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of usersRes; let i = index">
+    <tr *ngFor="let user of response?.data; let i = index">
       <td>
         <input type="checkbox" />
       </td>

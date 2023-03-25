@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../table/interceptor';
+import { User, UsersResponse } from '../table/interceptor';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +10,7 @@ import { User } from '../table/interceptor';
   imports: [CommonModule],
 })
 export class CardComponent implements OnInit {
-  @Input() users: User[] = [];
+  @Input() usersRes: UsersResponse[] = [];
   constructor() {}
 
   ngOnInit() {}

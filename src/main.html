@@ -4,7 +4,7 @@
 <app-card *ngIf="mode == 'cards'" [users]="users"></app-card>
 <app-table
   *ngIf="mode == 'table'"
-  [users]="users"
+  [usersRes]="UsersResponse"
   (previous)="previousPage()"
   (next)="nextPage()"
 ></app-table>

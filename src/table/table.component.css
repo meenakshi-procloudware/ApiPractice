@@ -13,10 +13,14 @@ img {
   justify-content: space-between;
   position: fixed;
   bottom: 0px;
-  background-color: skyblue;
+  background-color: white;
 }
 
 .pagination {
   display: flex;
   gap: 10px;
+}
+button:disabled {
+  background-color: skyblue;
+  color: black;
 }

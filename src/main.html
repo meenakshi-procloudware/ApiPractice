@@ -2,6 +2,16 @@
 <button class="mode" (click)="mode = 'cards'">Cards</button>
 <button class="mode" (click)="mode = 'table'">Table</button>
 <app-card *ngIf="mode == 'cards'" [users]="users"></app-card>
+<div class="dropDown">
+  <span>USERS PER PAGE: </span>
+  <select name="" id="" [(ngModel)]="per_page">
+    <option *ngFor="let number of pageNumber" [value]="number">
+      {{number}}
+    </option>
+    <!-- <option value = "3">3</option>
+    <option value = "4">4</option> -->
+  </select>
+</div>
 <app-table
   *ngIf="mode == 'table'"
   [response]="response"

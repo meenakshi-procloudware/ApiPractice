@@ -27,9 +27,21 @@
   </tbody>
 </table>
 <div class="footer">
-  <div>Page:1</div>
+  <div>Page:{{ response?.page }}</div>
   <div class="pagination">
-    <button class="btn-primary" (click)="previous.emit()">Previous</button>
-    <button class="btn-primary" (click)="next.emit()">Next</button>
+    <button
+      [disabled]="response?.page == 1"
+      class="btn-primary"
+      (click)="previous.emit()"
+    >
+      Previous
+    </button>
+    <button
+      [disabled]="response?.total_pages <= response?.page"
+      class="btn-primary"
+      (click)="next.emit()"
+    >
+      Next
+    </button>
   </div>
 </div>

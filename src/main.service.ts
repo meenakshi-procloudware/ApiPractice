@@ -8,7 +8,9 @@ import { UsersResponse } from './table/interceptor';
 })
 export class MainService {
   constructor(private http: HttpClient) {}
-  getUsers(): Observable<UsersResponse> {
-    return this.http.get<UsersResponse>(`https://reqres.in/api/users`);
+  getUsers(page: number, per_page: number): Observable<UsersResponse> {
+    return this.http.get<UsersResponse>(
+      `https://reqres.in/api/users?per_page=${per_page}&page=` + page
+    );
   }
 }

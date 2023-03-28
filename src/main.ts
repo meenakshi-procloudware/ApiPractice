@@ -5,9 +5,9 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './card/card.component';
 import { TableComponent } from './table/table.component';
-import { User, UsersResponse } from './table/interceptor';
 import { MainService } from './main.service';
 import { FormsModule } from '@angular/forms';
+import { User, UsersResponse } from './table/interface';
 
 @Component({
   selector: 'my-app',

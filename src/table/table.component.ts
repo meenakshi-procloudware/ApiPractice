@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { User, UsersResponse } from './interceptor';
+import { UsersResponse } from './interface';
 
 @Component({
   selector: 'app-table',
@@ -10,7 +10,7 @@ import { User, UsersResponse } from './interceptor';
   imports: [CommonModule],
 })
 export class TableComponent implements OnInit {
-  @Input() response: any = {};
+  @Input() response: UsersResponse;
   @Output() previous = new EventEmitter();
   @Output() next = new EventEmitter();
 
